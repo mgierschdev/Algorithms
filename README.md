@@ -30,6 +30,7 @@ though in some cases I might be wrong or if you have any comment feel free to op
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |-----|
 Leetcode-338| [Counting Bits](https://leetcode.com/problems/counting-bits/)| [Java](/src/main/java/CountBits.java) | _O(n)_ | _O(n)_ | Medium ||
+Personal | Count bitwise| [Java](/src/main/java/CountBitwise.java) | _O(n)_ | _O(n)_ | Easy ||
 <br/>
 <div align="right">
     <b><a href="#algorithms">⬆️ Back to Top</a></b>
