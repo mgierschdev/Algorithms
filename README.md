@@ -29,6 +29,7 @@ though in some cases I might be wrong or if you have any comment feel free to op
 ## Bit Manipulation
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |-----|
+Leetcode-338| [Counting Bits](https://leetcode.com/problems/counting-bits/)| [Java](/src/main/java/CountBits.java) | _O(n)_ | _O(n)_ | Medium ||
 <br/>
 <div align="right">
     <b><a href="#algorithms">⬆️ Back to Top</a></b>
@@ -150,7 +151,6 @@ Leetcode-1611| [Minimum One Bit Operations to Make Integers Zero](https://leetco
 Leetcode-213| [House robber II](https://leetcode.com/problems/house-robber-ii/)| [Java](/src/main/java/HouseRobberII.java) | _O(n)_ | _O(n)_ | Medium ||
 Leetcode-337| [House robber III](https://leetcode.com/problems/house-robber-iii/)| [Java](/src/main/java/HouseRobberIII.java) | _O(n)_ | _O(n)_ | Medium |  DP in a Tree.|
 Leetcode-338| [Counting Bits](https://leetcode.com/problems/counting-bits/)| [Java](/src/main/java/CountBits.java) | _O(n)_ | _O(n)_ | Medium ||
-
 Leetcode-| [LIS]()| [Java](/src/main/java/LIS.java) | _O(n * n)_ | _O(n * n)_ | Medium ||
 
 <br/>
