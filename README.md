@@ -98,6 +98,7 @@ Leetcode-1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/co
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |-----|
 Leetcode-704| [Binary Search](https://leetcode.com/problems/binary-search/)| [Java](/src/main/java/BinarySearch.java) | _O(log(n))_ | _O(1)_ | Easy | 3 solutions: Recursive, Iterative and Java API.  |
 Leetcode-148| [Sort List]( https://leetcode.com/problems/sort-list/)| [Java](/src/main/java/MergeSortList.java) |_O(n*log(n))_| _O(1)_| Medium | Mergesort |
+    Hackerrank-148| [Sorting: Comparator](https://www.hackerrank.com/challenges/ctci-comparator-sorting/problem)| [Java](/src/main/java/Checker.java) | | | Medium | Java Comparator |
 
 <br/>
 <div align="right">
