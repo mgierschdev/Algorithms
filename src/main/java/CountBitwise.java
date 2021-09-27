@@ -3,7 +3,7 @@
  @author: Maximiliam Gierschmann
 
  This counts the longest sequence of zeros in a binary string
- 
+
  */
 
 public class CountBitwise {

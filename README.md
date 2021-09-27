@@ -1,4 +1,4 @@
-# [LeetCode](https://leetcode.com/problemset/all/)
+# Code repository [Java]
 
 ![Language](https://img.shields.io/badge/language-Java-orange.svg) 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
