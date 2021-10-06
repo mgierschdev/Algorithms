@@ -86,6 +86,7 @@ Leetcode-111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/mini
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |-----|
 Leetcode-1009 | [Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/) | [Java](/src/main/java/ComplementBaseTen.java) | _O(1)_ | _O(1)_ | Easy ||
+Prime | Calculating if a number is Prime | [Java](/src/main/java/Prime.java) | _O(Sqrt(n))_ | _O(1)_ | Easy ||
 
 <br/>
 <div align="right">
