@@ -3,12 +3,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Collections;
 import java.util.LinkedList;
 
-
 class CheckerTest {
     @Test
     public void baseTest(){
         LinkedList<Player> players = new LinkedList<>();
-        LinkedList<Player> expectedResult = new LinkedList<Player>();
+        LinkedList<Player> expectedResult = new LinkedList<>();
 
         players.add(new Player("amy", 100));
         players.add(new Player("david", 100));
@@ -30,5 +29,4 @@ class CheckerTest {
             assertEquals(players.get(i).score, expectedResult.get(i).score);
         }
     }
-
 }
