@@ -1,18 +1,18 @@
 // Exercise 190 Leetcode
-
 public class ReverseBits {
-    // you need treat n as an unsigned value
+    //from: 11
+    //to: 11000000000000000000000000000000
+    //from: 1100100
+    //to: 100110000000000000000000000000
     public int reverseBits(int n) {
-
-        while(n != 0){
-            int tmp = (n  << 1) ^ 1;
-            System.out.println("Digit "+Integer.toBinaryString(tmp));
-            n = n >> 1;
-
+        int newNumber = 0;
+        for(int i = 0; i < 32; i++){
+            newNumber += n & 1;
+            n >>>= 1;
+            if(i < 31){
+                newNumber <<= 1;
+            }
         }
-
-        System.out.println(" ");
-        return 2;
-
+        return newNumber;
     }
 }
