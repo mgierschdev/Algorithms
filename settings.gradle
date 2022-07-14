@@ -1,2 +1,2 @@
-rootProject.name = 'xcode-select --install'
-include 'src'
+rootProject.name = 'Algorithms'
+
