@@ -6,17 +6,19 @@ import java.util.Arrays;
 public class GeneratePrime {
     public ArrayList<Integer> generatePrimeNumbers(Integer n){
         ArrayList<Integer> primes = new ArrayList<>();
-        boolean[] numbers = new boolean[1000];
-        Arrays.fill(numbers, false);
+        boolean[] numbers = new boolean[n + 1];
+        Arrays.fill(numbers, true);
+        numbers[0] = false;
+        numbers[1] = false;
 
-        for (int i = 2; i < numbers.length; i++) {
-            for (int j = i; j < numbers.length; j = j * j) {
+        for (int i = 2; i * i <= n; i++) {
+            for (int j = i * i; j <= n; j += i) {
                 numbers[j] = false;
             }
         }
 
         for(int i = 0; i < numbers.length; i++){
-            if(!numbers[i]){
+            if(numbers[i]){
                 primes.add(i);
             }
         }
