@@ -14,7 +14,9 @@ public class GeneratePrime {
         for (int i = 2; i * i <= n; i++) {
             for (int j = i * i; j <= n; j += i) {
                 numbers[j] = false;
+                System.out.println(numbers[j] + " "+ j);
             }
+            System.out.println(" ");
         }
 
         for(int i = 0; i < numbers.length; i++){
