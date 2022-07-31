@@ -6,6 +6,6 @@ class RepeatedSubstringPatternTest {
     public void baseCase(){
         RepeatedSubstringPattern s = new RepeatedSubstringPattern();
         Assertions.assertTrue(s.repeatedSubstringPattern("abab"));
-        Assertions.assertTrue(s.repeatedSubstringPattern("aba"));
+        Assertions.assertFalse(s.repeatedSubstringPattern("aba"));
     }
 }
