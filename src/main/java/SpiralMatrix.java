@@ -5,7 +5,6 @@ import java.util.List;
 public class SpiralMatrix {
 
     public List<Integer> spiralOrder(int[][] matrix){
-
         List<Integer> sol = new LinkedList<>();
         int layers = (matrix.length + 1) / 2;
 
@@ -20,7 +19,6 @@ public class SpiralMatrix {
 //                {4, 5, 6},
 //                {7, 8, 9}};
 
-
             int n = matrix.length; // rows
             int m = matrix[0].length; // cols
 
@@ -31,11 +29,13 @@ public class SpiralMatrix {
                 System.out.print(matrix[layer][i]+" ");
             }
             System.out.println(" ");
+
             //right
             for (int i = layer; i < n - layer; i++) {
                 System.out.print(matrix[i][m - 1 - layer] + " ");
             }
             System.out.println(" ");
+
             //bot
             for(int i = m - layer - 2; i >= 0; i--){
                 System.out.print(matrix[m - layer - 1][i] + " ");
@@ -49,8 +49,6 @@ public class SpiralMatrix {
             }
 
             System.out.println(" ");
-
-
         }
 
         return new LinkedList<>();
