@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SpiralMatrixIITest {
 
     @Test
@@ -12,5 +10,4 @@ class SpiralMatrixIITest {
         int[][] expected = new int[][]{{1, 2, 3}, {8, 9, 4}, {7, 6, 5}};
         Assertions.assertArrayEquals(matrix, expected);
     }
-
 }
