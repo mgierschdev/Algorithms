@@ -1,3 +1,4 @@
+import Util.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +14,7 @@ class OddEvenTreeTest {
         root.right.right = new TreeNode(9);
         root.right.left = new TreeNode(7);
         OddEvenTree s = new OddEvenTree();
-        assertEquals(s.isEvenOddTree(root), true);
+        assertTrue(s.isEvenOddTree(root));
     }
 
     @Test
@@ -26,6 +27,6 @@ class OddEvenTreeTest {
         root.right.right = new TreeNode(10);
         root.right.left = new TreeNode(7);
         OddEvenTree s = new OddEvenTree();
-        assertEquals(s.isEvenOddTree(root), false);
+        assertFalse(s.isEvenOddTree(root));
     }
 }

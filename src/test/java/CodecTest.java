@@ -1,3 +1,4 @@
+import Util.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +14,7 @@ class CodecTest {
         Codec c = new Codec();
         String s = c.serialize(root);
         TreeNode copy = c.deserialize(s);
-        assertEquals(checkTrees(root, copy), true);
+        assertTrue(checkTrees(root, copy));
     }
 
     public boolean checkTrees(TreeNode one, TreeNode two){

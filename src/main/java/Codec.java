@@ -1,3 +1,5 @@
+import Util.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 /**
@@ -26,13 +28,13 @@ public class Codec {
                 if(current == null){
                     s.append("null,");
                 }else{
-                    s.append(current.val+",");
+                    s.append(current.val).append(",");
                     q.offer(current.left);
                     q.offer(current.right);
                 }
             }
         }
-        return s.toString().substring(0, s.length() - 1);
+        return s.substring(0, s.length() - 1);
     }
 
     // Decodes your encoded data to tree.
@@ -43,7 +45,7 @@ public class Codec {
 
         int index = 1;
         String[] numbers = data.split(",");
-        TreeNode root = new TreeNode(Integer.valueOf(numbers[0]));
+        TreeNode root = new TreeNode(Integer.parseInt(numbers[0]));
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
 
@@ -54,13 +56,13 @@ public class Codec {
             }
 
             if(numbers[index].compareTo("null") != 0){
-                n.left = new TreeNode(Integer.valueOf(numbers[index]));
+                n.left = new TreeNode(Integer.parseInt(numbers[index]));
             }
             q.offer(n.left);
             index++;
 
             if(numbers[index].compareTo("null") != 0){
-                n.right = new TreeNode(Integer.valueOf(numbers[index]));
+                n.right = new TreeNode(Integer.parseInt(numbers[index]));
             }
             q.offer(n.right);
             index++;

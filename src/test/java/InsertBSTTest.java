@@ -1,3 +1,4 @@
+import Util.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,6 +13,6 @@ class InsertBSTTest {
         root.left.right = new TreeNode(3);
         InsertBST i = new InsertBST();
         TreeNode r = i.insertIntoBST(root, 5);
-        assertEquals(i.checkIfBST(r), true);
+        assertTrue(i.checkIfBST(r));
     }
 }

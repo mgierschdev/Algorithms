@@ -23,12 +23,7 @@ public class SpiralMatrix {
     }
 
     public void process(int row1, int row2, int col1, int col2) {
-
-        //top
-        //System.out.println("row1 "+row1+","+row2+" "+sol.size()+" "+col1+","+col2);
-        //System.out.println(" ");
         for (int i = col1; i <= col2; i++) {
-          //  System.out.println(matrix[row1][i]);
             sol.add(matrix[row1][i]);
         }
 
