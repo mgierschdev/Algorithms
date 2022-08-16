@@ -26,4 +26,20 @@ public class Utils {
 
          return l;
     }
+
+    public static  int hammingDistance(int a, int b){
+        String aa = Integer.toBinaryString(a);
+        String bb = Integer.toBinaryString(b);
+        int count = 0;
+
+        aa = "0".repeat(32 - aa.length()) + aa;
+        bb = "0".repeat(32 - bb.length()) + bb;
+
+        for(int i = 0; i < 32; i++){
+            if(aa.charAt(i) != bb.charAt(i)){
+                count++;
+            }
+        }
+        return count;
+    }
 }
