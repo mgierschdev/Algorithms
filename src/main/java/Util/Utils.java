@@ -1,5 +1,6 @@
 package Util;
 
+import java.time.temporal.Temporal;
 import java.util.List;
 
 public class Utils {
@@ -27,7 +28,7 @@ public class Utils {
          return l;
     }
 
-    public int hammingDistance(int a, int b){
+    public static int hammingDistance(int a, int b){
         int count = 0 ;
         int c = a ^ b;
 
@@ -36,5 +37,27 @@ public class Utils {
             c >>= 1;
         }
         return count;
+    }
+
+    public static boolean treeCompare(TreeNode a, TreeNode b){
+        if((a == null && b != null) || (b == null && a != null)){
+            return false;
+        }else if(a == null){
+            return true;
+        }
+
+        if(a.val != b.val){
+            return false;
+        }
+        return treeCompare(a.left, b.left) && treeCompare(a.right, a.right);
+    }
+
+    public static void printPreOrderTraversal(TreeNode node){
+        if(node == null){
+            return;
+        }
+        System.out.println(node.val);
+        printPreOrderTraversal(node.left);
+        printPreOrderTraversal(node.right);
     }
 }
