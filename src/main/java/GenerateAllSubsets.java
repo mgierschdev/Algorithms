@@ -56,7 +56,6 @@ public class GenerateAllSubsets {
             list.remove(list.size() - 1);
         }
     }
-
     //Generating all unique subsets in an iterative way (Cascading)
     public List<List<Integer>> subsetsCascading(int[] nums){
         List<List<Integer>> output = new LinkedList<>();
