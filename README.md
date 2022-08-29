@@ -148,7 +148,7 @@ Leetcode-39| [Combination Sum](https://leetcode.com/problems/combination-sum/)| 
 Leetcode-188| [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)| [Java](/src/main/java/BesTimeVI.java) |_O(n*m)_|_O(n*m)_| Hard ||
 Leetcode-70| [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)| [Java](/src/main/java/ClimbStairs.java) |_O(n)_| _O(n)_ | Easy ||
 Leetcode-62| [Unique Paths](https://leetcode.com/problems/unique-paths)| [Java](/src/main/java/ClimbStairs.java) |_O(n*m)_| _O(n*m)_ | Medium ||
-Leetcode-78| [Power set](https://leetcode.com/problems/unique-paths)| [Java](/src/main/java/PowerSet.java) |_O(N*2^N)_|_O(N*2^N)_ | Medium | 3 Solutions, using bit-masking, backtracking and cascading|
+Leetcode-78| [Power set](https://leetcode.com/problems/unique-paths)| [Java](/src/main/java/GenerateAllSubsets.java) |_O(N*2^N)_|_O(N*2^N)_ | Medium | 3 Solutions, using bit-masking, backtracking and cascading|
 Leetcode-72| [Edit Distance](https://leetcode.com/problems/edit-distance/)| [Java](/src/main/java/EditDistance.java) | _O(m*n)_ | _O(m*n)_ | Hard |  This is an adaptation of the Levenshtein distance algorithm by Steven S. Skienna, rewritten in java.|
 Leetcode-1611| [Minimum One Bit Operations to Make Integers Zero](https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/)| [Java](/src/main/java/GrayColor.java) | _O(1)_ | _O(1)_ | Hard |  An adaptation of the solution to solver the [gray color problem](https://en.wikipedia.org/wiki/Gray_code).|
 Leetcode-213| [House robber II](https://leetcode.com/problems/house-robber-ii/)| [Java](/src/main/java/HouseRobberII.java) | _O(n)_ | _O(n)_ | Medium ||

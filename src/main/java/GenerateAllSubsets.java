@@ -11,7 +11,7 @@ import java.util.List;
  Time/Space: O(n * 2^n), since there is at least n * 2^n subsets of n elements, we cannot beat that time/space
  */
 
-public class PowerSet {
+public class GenerateAllSubsets {
     //Generating all unique subsets using bit-masking
     public List<List<Integer>> subsetsBitMasking(int[] num) {
         List<List<Integer>> result = new LinkedList<>();
@@ -65,7 +65,7 @@ public class PowerSet {
         for(int num : nums){
             List<List<Integer>> newSubset = new LinkedList<>();
             for(List<Integer> l : result){
-                newSubset.add(new LinkedList<Integer>(l){{add(num);}});
+                newSubset.add(new LinkedList<>(l){{add(num);}});
             }
             output.addAll(newSubset);
         }
