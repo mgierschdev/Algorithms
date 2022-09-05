@@ -6,6 +6,7 @@ import java.util.List;
 public class Utils {
 
     public static void printMatrix(int[][] grid) {
+        System.out.println("printMatrix");
         for (int[] i : grid) {
             for (int j : i) {
                 System.out.print(j + " ");
