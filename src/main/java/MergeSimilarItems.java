@@ -22,8 +22,7 @@ public class MergeSimilarItems {
             list.add(l);
         }
 
-        List.sort(list, Comparator.comparingInt(a -> a.get(0)));
-
+        list.sort((List<Integer> a, List<Integer> b) -> b.get(0) - a.get(0));
         return list;
     }
 }
