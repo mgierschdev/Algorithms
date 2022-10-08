@@ -10,8 +10,7 @@ import java.util.List;
  Complexity:
  Time/Space: O(n * 2^n), since there is at least n * 2^n subsets of n elements, we cannot beat that time/space
  */
-
-public class GenerateAllSubsets {
+public class    GenerateAllSubsets {
     //Generating all unique subsets using bit-masking
     public List<List<Integer>> subsetsBitMasking(int[] num) {
         List<List<Integer>> result = new LinkedList<>();
