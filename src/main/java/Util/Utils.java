@@ -1,6 +1,5 @@
 package Util;
 
-import java.time.temporal.Temporal;
 import java.util.List;
 
 public class Utils {
@@ -60,5 +59,18 @@ public class Utils {
         System.out.println(node.val);
         printPreOrderTraversal(node.left);
         printPreOrderTraversal(node.right);
+    }
+
+    public static boolean isPalindrome(String s){
+        int left = 0;
+        int right = s.length() - 1;
+
+        while(left < right){
+            if(s.charAt(left++) != s.charAt(right--)){
+                return false;
+            }
+        }
+
+        return true;
     }
 }
