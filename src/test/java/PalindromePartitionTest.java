@@ -15,5 +15,4 @@ class PalindromePartitionTest {
         List<List<String>> result = partition.partition("aab");
         Assertions.assertEquals(expected, result);
     }
-
 }

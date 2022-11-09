@@ -9,6 +9,12 @@ class EditDistanceTest {
     }
 
     @Test
+    public void minDistanceRecursive(){
+        EditDistance e = new EditDistance();
+        assertEquals(e.minDistanceRecursive("horse", "rot"), 3);
+    }
+
+    @Test
     public void emptyCase(){
         EditDistance e = new EditDistance();
         assertEquals(e.minDistance("", ""),0);
