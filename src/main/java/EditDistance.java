@@ -102,7 +102,7 @@ public class EditDistance {
                     }
                 }
             }
-            printMatrix(memo);
+            //printMatrix(memo);
         }
 
         //Returning the result
@@ -110,20 +110,32 @@ public class EditDistance {
     }
 
     public int minDistanceRecursive(String a, String b) {
-        return compareRecursive(a, b, a.length() - 1, b.length() - 1);
+        if(a.length() == b.length() && a.compareTo(b) != 0 && a.length() == 1){
+            return 1;
+        }
+        int result = compareRecursive(a, b, a.length() - 1, b.length() - 1);
+        return Math.max(result, 0);
     }
 
     private int compareRecursive(String a, String b, int i, int j) {
-        int[] opt = new int[]{0, 0, 0};//cost of each operation match/insert/delete
+        int[] opt = new int[3];//cost of each operation match/insert/delete
 
-        if (i == 0 || j == 0) {
-            return 1;
+        if(i <= 0){
+            return j;
         }
 
-        opt[0] = compareRecursive(a, b, i - 1, j - 1) + (a.charAt(i) == b.charAt(j) ? 0 : 1);
-        opt[1] = compareRecursive(a, b, i, j - 1) + 1;
-        opt[2] = compareRecursive(a, b, i - 1, j) + 1;
+        if(j <= 0){
+            return i;
+        }
 
-        return Math.min(Math.min(opt[0], opt[1]), opt[2]);
+        if(a.charAt(i - 1) == b.charAt(j - 1)){
+            return compareRecursive(a, b, i - 1, j - 1);
+        }
+
+        opt[0] = compareRecursive(a, b, i - 1, j - 1);
+        opt[1] = compareRecursive(a, b, i, j - 1);
+        opt[2] = compareRecursive(a, b, i - 1, j);
+
+        return 1 + Math.min(Math.min(opt[0], opt[1]), opt[2]);
     }
 }
