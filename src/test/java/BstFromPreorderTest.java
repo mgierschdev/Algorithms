@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static Util.Utils.printPreOrderTraversal;
 import static Util.Utils.treeCompare;
-import static org.junit.jupiter.api.Assertions.*;
 
 class BstFromPreorderTest {
 

@@ -1,7 +1,6 @@
 // Leetcode problem 264.
 //An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class UglyNumberII {
 

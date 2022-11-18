@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 public class TopKFrequent {
 
-    public int[] TopKFrequent(int[] nums, int k){
+    public int[] FindTopKFrequent(int[] nums, int k){
         PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> b[1] - a[1]);
         HashMap<Integer, Integer> map = new HashMap<>();
 

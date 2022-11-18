@@ -30,7 +30,7 @@ public class MaximalNetworkRank {
     }
 
     public int maximalNetworkRank(int n, int[][] roads) {
-        int max = 0, count = 0;
+        int max = 0;
         HashMap<Integer, Integer> map = new HashMap<>();
         HashSet<Pair> set = new HashSet<>();
         for(int i = 0; i < roads.length; i++){

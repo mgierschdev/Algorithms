@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 // Leetcode problem 150
 // Ref: https://leetcode.com/problems/evaluate-reverse-polish-notation/
 public class EvalRPN {

@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.HashMap;
 
 // 494 target sum, leetcode
 public class TargetSum {

@@ -102,7 +102,7 @@ public class EditDistance {
                     }
                 }
             }
-            //printMatrix(memo);
+            printMatrix(memo);
         }
 
         //Returning the result

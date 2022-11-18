@@ -7,7 +7,6 @@ public class BalanceBST {
     List<Integer> list;
 
     public TreeNode balanceBST(TreeNode root) {
-
         list = new LinkedList<>();
         inOrderTraversal(root);
         int[] s = list.stream().mapToInt(i->i).toArray();
