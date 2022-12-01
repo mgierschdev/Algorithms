@@ -1,5 +1,3 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int index = nums1.length - 1;

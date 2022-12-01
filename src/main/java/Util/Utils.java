@@ -15,45 +15,48 @@ public class Utils {
         System.out.println(" ");
     }
 
-    public static List<Integer> preOrderList(TreeNode node, List<Integer> l){
-        if(node == null){
+    public static List<Integer> preOrderList(TreeNode node, List<Integer> l) {
+        if (node == null) {
             return l;
         }
 
         l.add(node.val);
 
-         preOrderList(node.left, l);
-         preOrderList(node.right, l);
+        preOrderList(node.left, l);
+        preOrderList(node.right, l);
 
-         return l;
+        return l;
     }
 
-    public static int hammingDistance(int a, int b){
-        int count = 0 ;
+    public static int hammingDistance(int a, int b) {
+        int count = 0;
         int c = a ^ b;
 
-        while(c != 0){
+        while (c != 0) {
             count += 1 & c;
             c >>= 1;
         }
         return count;
     }
 
-    public static boolean treeCompare(TreeNode a, TreeNode b){
-        if((a == null && b != null) || (b == null && a != null)){
+    public static boolean treeCompare(TreeNode a, TreeNode b) {
+        if ((a == null && b != null) || (b == null && a != null)) {
             return false;
-        }else if(a == null){
+        } else if (a == null) {
             return true;
         }
+        
+        System.out.println("Comparing " + a.val + " " + b.val);
 
-        if(a.val != b.val){
+        if (a.val != b.val) {
+            System.out.println("Not equal " + a.val + " " + b.val);
             return false;
         }
         return treeCompare(a.left, b.left) && treeCompare(a.right, a.right);
     }
 
-    public static void printPreOrderTraversal(TreeNode node){
-        if(node == null){
+    public static void printPreOrderTraversal(TreeNode node) {
+        if (node == null) {
             return;
         }
         System.out.println(node.val);
@@ -61,12 +64,12 @@ public class Utils {
         printPreOrderTraversal(node.right);
     }
 
-    public static boolean isPalindrome(String s){
+    public static boolean isPalindrome(String s) {
         int left = 0;
         int right = s.length() - 1;
 
-        while(left < right){
-            if(s.charAt(left++) != s.charAt(right--)){
+        while (left < right) {
+            if (s.charAt(left++) != s.charAt(right--)) {
                 return false;
             }
         }
