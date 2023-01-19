@@ -1,5 +1,6 @@
-public class SingleNonDuplicate {
+// Leetcode problem 540 Single element in a sorted array in Log(n)
 
+public class SingleNonDuplicate {
     public int singleNonDuplicate(int[] nums){
 
         int left = 0, right = nums.length - 1;
