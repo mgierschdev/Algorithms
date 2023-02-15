@@ -11,7 +11,7 @@ public class LongestPalindromicString {
         }
 
         result = s.charAt(0) + "";
-        int[] index = new int[] {};
+ 
         for (int i = 0; i < s.length(); i++) {
             expand(i - 1, i + 1, s); // with mid, without mid
             expand(i, i + 1, s);
