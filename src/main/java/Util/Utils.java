@@ -45,7 +45,7 @@ public class Utils {
         } else if (a == null) {
             return true;
         }
-        
+
         System.out.println("Comparing " + a.val + " " + b.val);
 
         if (a.val != b.val) {
@@ -75,5 +75,27 @@ public class Utils {
         }
 
         return true;
+    }
+
+    public static TrieNode buildTrie(String[] words) {
+        TrieNode tmp = new TrieNode();
+        TrieNode root = tmp;
+
+        for (int i = 0; i < words.length; i++) {
+            root = tmp;
+            for (char c : words[i].toCharArray()) {
+                int val = (int) (c - 'a');
+
+                if (root.nodes[val] == null) {
+                    root.nodes[val] = new TrieNode();
+                }
+
+                root = root.nodes[val];
+            }
+
+            root.word = words[i];
+        }
+
+        return tmp;
     }
 }
