@@ -4,6 +4,8 @@ import java.util.Arrays;
  @author: Maximiliam Gierschmann
  Leetcode reference: https://leetcode.com/problems/binary-search/
 
+ Category: Binary search
+
  Space/Time Complexity:
  Space: O(1)
  Time: O(log(n))
