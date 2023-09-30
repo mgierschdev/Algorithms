@@ -1,5 +1,7 @@
 package Array;
 
+import Util.ListNode;
+
 /**
  @date: October 7, 2020
  @author: Maximiliam Gierschmann
