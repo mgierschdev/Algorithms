@@ -6,12 +6,12 @@ class SplitPalindromeTest {
     @Test
     public void baseCase(){
         SplitPalindrome c = new SplitPalindrome();
-        Assertions.assertEquals(c.checkPalindromeFormation("ulacfd","jizalu"), true);
+        Assertions.assertTrue(c.checkPalindromeFormation("ulacfd","jizalu"));
     }
 
     @Test
     public void falseCase(){
         SplitPalindrome c = new SplitPalindrome();
-        Assertions.assertEquals(c.checkPalindromeFormation("xbdef","xecab"), false);
+        Assertions.assertFalse(c.checkPalindromeFormation("xbdef","xecab"));
     }
 }
