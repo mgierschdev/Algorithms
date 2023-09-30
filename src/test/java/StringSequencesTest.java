@@ -11,6 +11,6 @@ class StringSequencesTest {
         List<String> expected = new LinkedList<>();
         expected.add("LLLLLDDDDD");
         expected.add("DDDDDLLLLL");
-        assertTrue(expected.equals(b.findRepeatedDnaSequences("LLLLLDDDDDLLLLLDDDDDDLLLLLGGGTTT")));
+        assertEquals(expected, b.findRepeatedDnaSequences("LLLLLDDDDDLLLLLDDDDDDLLLLLGGGTTT"));
     }
 }

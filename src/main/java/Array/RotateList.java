@@ -3,8 +3,8 @@ package Array;
 import Util.ListNode;
 
 /**
- @date: October 7, 2020
- @author: Maximiliam Gierschmann
+ date: October 7, 2020,
+ author: Maximiliam Gierschmann
  Leetcode reference: https://leetcode.com/problems/rotate-list/
 
  Space/Time Complexity:
