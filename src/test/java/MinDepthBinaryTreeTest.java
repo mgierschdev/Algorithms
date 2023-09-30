@@ -1,3 +1,4 @@
+import Tree.MinDepthBinaryTree;
 import Util.TreeNode;
 import org.junit.jupiter.api.Test;
 
