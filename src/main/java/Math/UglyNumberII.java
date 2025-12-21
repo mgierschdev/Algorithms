@@ -1,4 +1,13 @@
 package Math;// Leetcode problem 264.
+
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
 //An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
 import java.util.ArrayList;
 

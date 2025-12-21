@@ -1,4 +1,13 @@
 package DP;//Leetcode: 1143. Longest Common Subsequence
+
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
 // https://leetcode.com/problems/longest-common-subsequence/
 
 import Util.Utils;

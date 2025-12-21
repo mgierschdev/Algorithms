@@ -1,5 +1,14 @@
 package Math;
 
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

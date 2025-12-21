@@ -1,80 +1,75 @@
 1. What this repository is
-Java 11 Gradle project of standalone algorithm and data-structure implementations (arrays, strings, trees, graphs, DP, etc.) with accompanying JUnit 5 tests; no services, UIs, or external systems are present (see `build.gradle`, `src/main/java`, `src/test/java`).
+A Java-only Gradle project containing standalone algorithm and data-structure implementations plus JUnit 5 tests; it is not a service, CLI tool, UI app, or production library (evidence: `build.gradle`, `src/main/java`, `src/test/java`).
 
 2. Why it exists
-Provides a practice and reference library for interview-style problems so developers can study patterns and run the solutions locally; intended for Java developers wanting ready-made examples with tests.
+To provide a practice/reference set of interview-style solutions for Java developers and learners who want concrete examples with tests (evidence: the collection of problem-specific classes under `src/main/java` and tests under `src/test/java`).
 
 3. Quickstart
-- Prerequisites: Java 11 (per `.travis.yml`), Gradle 6+ installed locally (no `gradlew` wrapper in repo), internet access to fetch Maven Central dependencies (see `build.gradle`).
-- Install dependencies/build once: `gradle build`
-- Run the full test suite: `gradle test`
-- Troubleshooting: if Gradle is missing, install via your package manager; ensure JAVA_HOME points to Java 11; if dependency download fails, check network access to Maven Central.
+- Prerequisites: Java 11 (per `.travis.yml`), Gradle (version Unknown; no wrapper present; install via package manager), internet access to download Maven Central dependencies (see `build.gradle`).
+- Build: `gradle build`
+- Test: `gradle test`
+- Troubleshooting: if `gradle` is missing, install Gradle locally; if Java is not 11, align `JAVA_HOME` with a Java 11 installation; if dependency download fails, check network access to Maven Central (`build.gradle`).
 
 4. Architecture at a glance
 ```mermaid
 graph TD
-    Tests[JUnit tests<br>src/test/java] --> ArrayPkg[Array/]
-    Tests --> StringPkg[String/]
-    Tests --> DPPkg[DP/]
-    Tests --> TreePkg[Tree/]
-    Tests --> GraphPkg[Graph/]
-    Tests --> Others[BitManipulation/, Sort/, Math/, Hashmap/, Design/, StackQueue/]
-    ArrayPkg --> Util[Util/ shared nodes & helpers]
-    StringPkg --> Util
-    DPPkg --> Util
-    TreePkg --> Util
-    GraphPkg --> Util
-    Others --> Util
+    Tests[JUnit tests<br>src/test/java] --> Algorithms[Algorithm classes<br>src/main/java]
+    Algorithms --> Util[Shared data structures/helpers<br>src/main/java/Util]
 ```
-Control/data flow: JUnit tests under `src/test/java` instantiate algorithm classes in the domain folders, pass primitive/collection inputs, and assert results. Algorithms operate in-memory using shared data structures from `src/main/java/Util` (e.g., `TreeNode`, `ListNode`, `TrieNode`) and return values or mutate provided nodes; no external I/O beyond occasional console prints in utilities.
+The tests instantiate algorithm classes, pass in-memory inputs, and assert results. Algorithms operate on primitives/collections or shared helper nodes in `src/main/java/Util` and return results; no external I/O or services are used (evidence: `src/main/java/**`, `src/test/java/**`).
 
 5. Core components
-- Algorithm packages (`src/main/java/Array`, `String`, `DP`, `Tree`, `Graph`, `BitManipulation`, `Sort`, `Math`, `Hashmap`, `Design`, `StackQueue`): Individual classes implementing specific problems (e.g., `Array/ThreeSum.java`, `Tree/Codec.java`). Topic coverage includes arrays/lists, strings, dynamic programming, binary trees/BSTs, graphs, heaps/queues/stacks, bit manipulation, sorting/searching, math/number theory, hash maps/sets, and simple design exercises (paths verified by the package directories under `src/main/java`).
-- Shared utilities (`src/main/java/Util`): Common data structures and helpers (`TreeNode`, `ListNode`, `TrieNode`, `Pair`, `MeanQueue`, `BitOperations`, `Utils`, `Player`).
-- Tests (`src/test/java`): JUnit 5 test cases exercising algorithms (e.g., `src/test/java/ThreeSumTest.java`, `CodecTest.java`).
-- Build config (`build.gradle`, `settings.gradle`): Java plugin, JUnit 5 dependencies, project name `Algorithms`.
-- CI config (`.travis.yml`): Travis setup targeting OpenJDK 11 on Linux.
+- Algorithm packages: `src/main/java/Array`, `src/main/java/String`, `src/main/java/DP`, `src/main/java/Tree`, `src/main/java/Graph`, `src/main/java/BitManipulation`, `src/main/java/Sort`, `src/main/java/Math`, `src/main/java/Hashmap`, `src/main/java/Design`, `src/main/java/StackQueue`.
+- Shared utilities: `src/main/java/Util` (common nodes and helpers such as `TreeNode`, `ListNode`, `TrieNode`, `Pair`, `Utils`).
+- Tests: `src/test/java` (JUnit 5 tests per algorithm).
+- Build config: `build.gradle`, `settings.gradle`.
+- CI config: `.travis.yml`.
 
 6. Interfaces
-- Public Java APIs: Each algorithm class exposes one or more public methods (e.g., `ThreeSum.threeSum(int[])` in `src/main/java/Array/ThreeSum.java`, `Codec.serialize(TreeNode)`/`deserialize(String)` in `src/main/java/Tree/Codec.java`, `BinarySearch.search(int[], int)` in `src/main/java/Sort/BinarySearch.java`, `RecentCounter.ping(int)` in `src/main/java/StackQueue/RecentCounter.java`).
-- Data structures: Shared node types (`Util.TreeNode`, `Util.ListNode`, `Util.TrieNode`, etc.) used as inputs/outputs across algorithms.
-- No CLI commands, HTTP endpoints, message queues, or file-based inputs/outputs are defined (absence confirmed by lack of such code in `src/main/java/**`).
-- Usage examples: JUnit tests demonstrate invocation patterns (e.g., constructing `ThreeSum` and calling `threeSum` in `src/test/java/ThreeSumTest.java`).
+- Public Java methods exposed by each algorithm class (examples in tests such as `ThreeSum.threeSum` in `src/test/java/ThreeSumTest.java` and `Codec.serialize`/`deserialize` in `src/test/java/CodecTest.java`).
+- Shared node/data structures used as inputs/outputs (`src/main/java/Util/TreeNode.java`, `src/main/java/Util/ListNode.java`, `src/main/java/Util/TrieNode.java`).
+- No CLI commands, HTTP endpoints, message queues, or file-based interfaces are defined (evidence: `src/main/java/**`).
 
 7. Configuration
-- Environment variables: None referenced in source or build files (search across `src` and `build.gradle`).
-- Build configuration: Dependencies and Java plugin in `build.gradle`; project name in `settings.gradle`.
-- CI profile: `.travis.yml` specifies `language: java`, `jdk: openjdk11`, `os: linux`; no additional steps declared.
-- Secrets: None referenced; no secret management mechanisms present.
+- Environment variables: Unknown; they would be referenced in `src/main/java/**` or defined in `.env*` files (none found).
+- Build configuration: `build.gradle` defines the Java plugin and JUnit dependencies; `settings.gradle` defines the project name.
+- Runtime profiles: Unknown; a file like `application.yml`, `application.properties`, or `gradle.properties` would confirm (none present).
+- Secrets: None declared or referenced in code/config (evidence: `src/main/java/**`, `build.gradle`, `.travis.yml`).
 
 8. Dependencies and external services
-- JUnit 5.7 (`org.junit.jupiter:junit-jupiter-api`, `org.junit.jupiter:junit-jupiter-engine`) for tests — defined in `build.gradle`.
-- External services/databases/queues/cloud APIs: None referenced in codebase (no such imports or configs in `src/main/java/**` or `build.gradle`).
+- JUnit 5 (`org.junit.jupiter:junit-jupiter-api`, `org.junit.jupiter:junit-jupiter-engine`) via Maven Central (evidence: `build.gradle`).
+- External services/databases/queues/cloud APIs: None referenced (evidence: `src/main/java/**`, `build.gradle`).
 
 9. Quality and safety
-- Tests: JUnit 5 suite in `src/test/java`; run with `gradle test`.
-- Latest verification: `gradle test` failed locally because `gradle` is not installed in the environment (`command not found`); install Gradle and rerun.
-- CI: Travis CI configured via `.travis.yml` (defaults to Gradle build lifecycle with Java 11).
-- Linting/formatting: Not configured (no Checkstyle/Spotless/PMD rules in `build.gradle`).
-- Static analysis/security scanning: None configured (no dependency check or static analysis plugins).
-- Test/Build status: Not yet run in this update (run `gradle test` to verify locally).
+- Tests: JUnit 5 tests under `src/test/java`; run with `gradle test` (evidence: `build.gradle`, `src/test/java`).
+- CI: Travis CI configuration in `.travis.yml` (Java 11 on Linux).
+- Linting/formatting: Unknown (no lint/format plugins in `build.gradle`).
+- Static analysis/security scanning: Unknown (no scanners configured in `build.gradle`).
+- Latest verification: `gradle test` failed locally because `gradle` is not installed (`zsh: command not found: gradle`).
 
-10. What’s missing
-- Documentation: P1/M — Per-class problem statements and usage notes are minimal; next action: add JavaDoc summaries to algorithms in `src/main/java/**`.
-- Tests: P1/M — Edge cases and performance scenarios may be uncovered; next action: extend `src/test/java` with boundary cases (empty inputs, large inputs).
-- Security: P2/S — No static analysis or dependency scanning; next action: add a security scan plugin (e.g., OWASP Dependency Check) to `build.gradle`.
-- Reliability: P2/M — No stress/performance tests; next action: add benchmark-style tests for heavy input sizes.
-- Operations: P2/S — No packaging or artifact publication steps; next action: document or script JAR publishing if needed.
-- Developer experience: P1/S — No Gradle wrapper and limited onboarding notes; next action: generate `gradlew` and document tool versions.
+10. Sensitive information review
+Status: Clean
+Reviewed areas: `src/main/java`, `src/test/java`, `build.gradle`, `settings.gradle`, `.travis.yml`, `.vscode/settings.json`, `.idea/gradle.xml`, `.idea/misc.xml`, `.idea/vcs.xml`, `README.md`, `LICENSE.md`, `LICENSE.txt`, `.gitignore`
+Findings: none
+Actions taken: none
+Notes: No `.env` or key/cert files found in this repository.
 
-11. How this repository is useful
-Reusable, dependency-light Java implementations of common algorithms and data structures useful for interview prep, teaching, or seeding solutions in other projects. Shared utilities (`Util/*`) and test patterns can be safely reused in new algorithm collections or coding exercise setups.
+11. What’s missing
+- Documentation: P1/M — No per-class problem/complexity headers beyond a few inline notes; next action: add JavaDoc summaries to `src/main/java/**` explaining each problem and complexity.
+- Tests: P1/M — Some algorithms may lack edge or performance cases; next action: add boundary/performance tests in `src/test/java`.
+- Security: P2/S — No dependency or static analysis scanning; next action: add OWASP Dependency Check or similar to `build.gradle`.
+- Reliability: P2/M — No stress/benchmark suite; next action: add benchmark-style tests for large inputs.
+- Operations: P2/S — No packaging/publishing flow documented; next action: document JAR build/publish if needed.
+- Developer experience: P1/S — No Gradle wrapper present; next action: add `gradlew` and document the supported Gradle version.
 
-12. Automation hooks
-- Project type: Library (algorithms and utilities).
-- Primary domain: Algorithm practice/interview prep.
-- Core entities: Algorithm classes per domain (Array, String, DP, Tree, Graph, etc.) and shared nodes/helpers (`TreeNode`, `ListNode`, `TrieNode`, `MeanQueue`, `BitOperations`, `Utils`).
-- Extension points: Add new problem classes under an existing domain folder in `src/main/java/**`; add shared helpers in `src/main/java/Util`; add tests in `src/test/java`.
-- Areas safe to modify: New classes in domain folders, new tests, dependency updates in `build.gradle`.
-- Areas requiring caution: Changes to `Util/*` types or method signatures can cascade across many algorithms/tests; adjust dependents accordingly.
-- Canonical commands: build `gradle build`; test `gradle test`; run (no runtime entrypoint — invoke specific classes via tests or a custom harness).
+12. How this repository is useful
+It provides a broad set of reusable Java algorithm implementations and test patterns that can seed new problem sets or serve as examples for interviews/teaching. The shared utility node types in `src/main/java/Util` can be reused safely in similar algorithm collections.
+
+13. Automation hooks
+Project type: Java algorithms library
+Primary domain: Algorithm practice / data-structure exercises
+Core entities: Problem-specific algorithm classes under `src/main/java/**`, shared utility nodes in `src/main/java/Util`
+Extension points: Add new algorithm classes under the appropriate package in `src/main/java`; add tests under `src/test/java`
+Areas safe to modify: New algorithm classes, new tests, dependencies in `build.gradle`
+Areas requiring caution and why: `src/main/java/Util` types and helpers are shared across many algorithms/tests; changes can cascade broadly
+Canonical commands: build `gradle build`; test `gradle test`; run (no global entrypoint; execute via tests or a custom harness)

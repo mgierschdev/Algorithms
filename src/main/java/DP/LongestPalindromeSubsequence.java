@@ -1,5 +1,14 @@
 package DP;
 
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
+
 // Leetcode: 516. Longest Palindromic Subsequence
 // https://leetcode.com/problems/longest-palindromic-subsequence/
 public class LongestPalindromeSubsequence {

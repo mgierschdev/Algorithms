@@ -1,5 +1,14 @@
 package BitManipulation;
 
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
+
 // Exercise 190 Leetcode
 public class ReverseBits {
     //from: 11

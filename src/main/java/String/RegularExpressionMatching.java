@@ -1,5 +1,14 @@
 package String;// Leetcode 10. String.RegularExpressionMatching
 
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
+
 public class RegularExpressionMatching {
     // s string, p pattern
     // a a, a *

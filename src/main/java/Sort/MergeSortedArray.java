@@ -1,5 +1,14 @@
 package Sort;
 
+/*
+ * Problem: Unknown (not documented in repository)
+ * Goal: Unknown (not documented in repository)
+ * Approach: Unknown (not documented in repository)
+ * Time: Unknown (not documented in repository)
+ * Space: Unknown (not documented in repository)
+ */
+
+
 public class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int index = nums1.length - 1;
