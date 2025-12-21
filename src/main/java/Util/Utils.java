@@ -2,6 +2,14 @@ package Util;
 
 import java.util.List;
 
+/*
+Problem: Collect helper routines shared by multiple algorithm implementations.
+Goal: Avoid duplicating common utilities such as tree traversal, palindrome checks, and trie building.
+Approach: Static methods for matrix printing, preorder traversal, hamming distance, tree comparison, palindrome check, and trie construction.
+Time: O(n) for traversal-based helpers; O(1) for constant-time checks.
+Space: Varies by helper (generally O(1) extra).
+Tags: utility, tree, string
+*/
 public class Utils {
 
     public static void printMatrix(int[][] grid) {

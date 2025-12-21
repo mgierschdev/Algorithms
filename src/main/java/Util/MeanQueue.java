@@ -3,6 +3,14 @@ package Util;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/*
+Problem: Maintain running median over a sliding window for median-of-stream algorithms.
+Goal: Support offer/remove while retrieving median in O(1) time.
+Approach: Two heaps (max for lower half, min for upper half) kept size-balanced.
+Time: O(log n) per offer/remove, O(1) for getMean.
+Space: O(n) for stored window elements.
+Tags: heap, sliding-window
+*/
 public class MeanQueue {
     private PriorityQueue<Integer> min;
     private PriorityQueue<Integer> max;

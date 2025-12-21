@@ -1,5 +1,14 @@
 package Util;
 
+/*
+Problem: Provide reusable bit manipulation helpers for algorithms needing bit-level operations.
+Goal: Simplify setting, clearing, and reading bits without rewriting boilerplate.
+Approach: Package-level helper methods that mask and shift integers.
+Time: O(1) per operation.
+Space: O(1) auxiliary space.
+Tags: bitwise, utility
+*/
+
 // Bitwise tips and tricks
 
 // ~0 it is equal a sequence of ones
